@@ -1,6 +1,6 @@
 {
   "name": "dbmate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "build": "tsc",
     "build:docs": "typedoc ./src/*.ts",
@@ -12,7 +12,9 @@
   },
   "repository": "gitlab:defunctzombie/node-dbmate",
   "main": "dist/index.js",
-  "bin": "dist/cli.js",
+  "bin": {
+    "dbmate": "dist/cli.js"
+  },
   "files": [
     "yarn.lock",
     "package.json",
