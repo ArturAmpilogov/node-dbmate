@@ -19,7 +19,7 @@ function platformName(): string {
     case 'linux':
       return 'linux';
     case 'win32':
-        return 'windows';
+      return 'windows';
     default:
       throw new Error(`Unsupported platform: ${process.platform}`);
   }
