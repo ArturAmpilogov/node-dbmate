@@ -2,6 +2,10 @@
 
 Nodejs wrapper for [amacneil/dbmate](https://github.com/amacneil/dbmate)
 
+## Orgin
+The original work is done by Roman Shtylman at https://gitlab.com/defunctzombie/node-dbmate.
+This repository uses latest dbmate binaries.
+
 ## Library
 
 ```typescript
