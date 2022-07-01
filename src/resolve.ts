@@ -23,7 +23,7 @@ function platformName(): string {
     case 'darwin':
       return 'macos';
     case 'linux':
-      return isMusl ? 'linux-musl' : 'linux';
+      return isMusl() ? 'linux-musl' : 'linux';
     default:
       throw new Error(`Unsupported platform: ${process.platform}`);
   }
