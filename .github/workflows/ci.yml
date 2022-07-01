@@ -1,0 +1,27 @@
+name: PR
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # This workflow contains a single job called "lint"
+  quality:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest    
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@main
+        with:
+          node-version: '14'
+      - name: Reconfigure git to use HTTP authentication
+        run: >
+          git config --global url."https://github.com/".insteadOf
+          ssh://git@github.com/
+      - name: Install modules
+        run: npm ci
+      - name: Run ESLint
+        run: npm run lint
+      # - name: Run Tests
+      #   run: npm run test
+
