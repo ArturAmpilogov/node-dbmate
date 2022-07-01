@@ -1,16 +1,15 @@
 {
-  "name": "dbmate",
-  "version": "1.0.3",
+  "name": "node-dbmate",
+  "version": "1.1.0",
   "scripts": {
     "build": "tsc",
     "build:docs": "typedoc ./src/*.ts",
     "prepublish": "npm run build",
     "test": "jest",
-    "prettier:check": "prettier --check 'src/**/*.ts' 'spec/**/*.ts'",
-    "prettier:fix": "prettier --write 'src/**/*.ts' 'spec/**/*.ts'",
+    "prettier:check": "prettier --check 'src/**/*.ts'",
+    "prettier:fix": "prettier --write 'src/**/*.ts'",
     "lint": "npm run prettier:check"
   },
-  "repository": "gitlab:defunctzombie/node-dbmate",
   "main": "dist/index.js",
   "bin": {
     "dbmate": "dist/cli.js"
@@ -24,11 +23,11 @@
     "README.md"
   ],
   "devDependencies": {
-    "@types/jest": "25.1.4",
-    "@types/node": "13.9.0",
-    "jest": "25.1.0",
-    "prettier": "1.19.1",
-    "ts-jest": "25.2.1",
-    "typescript": "3.8.3"
+    "@types/jest": "28.1.4",
+    "@types/node": "18.0.0",
+    "jest": "28.1.2",
+    "prettier": "2.7.1",
+    "ts-jest": "28.0.5",
+    "typescript": "4.7.4"
   }
 }

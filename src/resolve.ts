@@ -1,11 +1,5 @@
-import { spawnSync } from 'child_process';
 import { join } from 'path';
 import { existsSync } from 'fs';
-
-function isMusl(): boolean {
-  const output = spawnSync('ldd', ['--version']).stderr.toString();
-  return output.indexOf('musl') >= 0;
-}
 
 function archName(): string {
   switch (process.arch) {
@@ -23,7 +17,9 @@ function platformName(): string {
     case 'darwin':
       return 'macos';
     case 'linux':
-      return isMusl ? 'linux-musl' : 'linux';
+      return 'linux';
+    case 'win32':
+      return 'windows';
     default:
       throw new Error(`Unsupported platform: ${process.platform}`);
   }
